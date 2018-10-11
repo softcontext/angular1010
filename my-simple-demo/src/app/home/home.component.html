@@ -1,0 +1,13 @@
+<h3>{{title}}</h3>
+<p>{{subTitle}}</p>
+
+<div class="">
+  <input type="text" name="" value="{{message}}"><br>
+  <input type="text" name="" [value]="message"><br>
+  <input type="text" name="" [(ngModel)]="message"><br>
+  <button type="button" (click)="update()">Update</button>
+</div>
+
+<div class="debug">
+  <pre>{{message}}</pre>
+</div>

@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<hr>
+
+<div class="container">
+  <h2>{{title}}</h2>
+  <ul>
+    <li><a routerLink="home">home</a></li>
+    <li><a routerLink="login">login</a></li>
+    <li><a routerLink="signup">signup</a></li>
+  </ul>
+  <div class="outlet">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<hr>
+
+<app-footer></app-footer>

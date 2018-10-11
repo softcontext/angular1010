@@ -1,0 +1,29 @@
+<h1>
+  <!-- interpolation -->
+  {{ title }}
+</h1>
+<p>
+  {{ body }}
+</p>
+
+<hr>
+
+<div>
+  <h2 class="text-error">Home: {{ message }}</h2>
+  <form class="form-inline">
+    <!-- (이벤트명)="코드" Event Binding -->
+    <!-- #문자열 엘리먼트참조 -->
+    <input type="text" #here (input)="message=here.value" placeholder="Message" name="message">
+    <hr />
+    <!-- [속성명]="변수" Property Binding -->
+    <input type="text" [value]="message" placeholder="Message" name="message">
+    <hr />
+    <!-- Two-way Binding -->
+    <input type="text" [(ngModel)]="message" placeholder="Message" name="message">
+    <button type="submit" class="btn" (click)="updateMessage(message)">Update Message</button>
+  </form>
+</div>
+
+<div class="">
+  <pre>{{message}}</pre>
+</div>

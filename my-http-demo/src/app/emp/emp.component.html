@@ -1,0 +1,26 @@
+<button type="button" (click)="findAll()">Find All</button>
+
+<div class="">
+  ID: <input type="text" #id>
+  <button type="button" (click)="findOne(id.value)">Find One</button>
+  <button type="button" (click)="deleteOne(id.value)">Delete One</button>
+</div>
+
+<div class="">
+  First Name: <input type="text" #first>
+  Last Name: <input type="text" #last>
+  <button type="button" (click)="addOne(first.value, last.value)">Add One</button>
+</div>
+
+<div class="">
+  Id : {{emp.id}}
+  First Name: <input type="text" [(ngModel)]="emp.firstName">
+  Last Name: <input type="text" [(ngModel)]="emp.lastName">
+  <button type="button" (click)="updateOne()">Update One</button>
+</div>
+
+<div class="">
+  <pre>{{emps | json}}</pre>
+  <pre>{{errorMessage}}</pre>
+  <pre>{{emp | json}}</pre>
+</div>

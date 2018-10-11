@@ -1,0 +1,29 @@
+<h3>books.component</h3>
+<div class="">
+
+  <!-- <ul>
+    <li>{{books[0].id}}</li>
+    <li>{{books[0].title}}</li>
+    <li>{{books[0].author}}</li>
+  </ul>
+  <ul>
+    <li>{{books[1].id}}</li>
+    <li>{{books[1].title}}</li>
+    <li>{{books[1].author}}</li>
+  </ul>
+  <ul>
+    <li>{{books[2].id}}</li>
+    <li>{{books[2].title}}</li>
+    <li>{{books[2].author}}</li>
+  </ul> -->
+
+  <!-- <ul *ngFor="let book of books; let i = index">
+    <li>{{i}}</li>
+    <li>{{book.id}}</li>
+    <li>{{book.title}}</li>
+    <li>{{book.author}}</li>
+  </ul> -->
+
+  <app-book-detail *ngFor="let book of books; let i = index"
+    [i]="i" [book]="book"></app-book-detail>
+</div>
