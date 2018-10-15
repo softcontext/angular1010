@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ngif.component.css']
 })
 export class NgifComponent implements OnInit {
-  gender = 2;
+  gender = 1;
 
   constructor() { }
 

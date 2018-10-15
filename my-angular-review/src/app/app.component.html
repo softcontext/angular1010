@@ -1,0 +1,20 @@
+<div class="bs-example">
+  <ul class="nav nav-pills">
+    <li routerLinkActive="active"><a routerLink="a">A</a></li>
+    <li routerLinkActive="active"><a routerLink="b">B</a></li>
+    <li class="dropdown" routerLinkActive="active">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle">ETC <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="c">C</a></li>
+        <li><a routerLink="parent">Parent</a></li>
+        <li><a href="#">#</a></li>
+        <li class="divider"></li>
+        <li><a href="#">#</a></li>
+      </ul>
+    </li>
+  </ul>
+  <hr />
+  <div class="margin">
+    <router-outlet></router-outlet>
+  </div>
+</div>

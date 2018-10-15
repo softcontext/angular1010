@@ -6,6 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MyResolveGuard implements Resolve<any> {
+
+  // A ==Resolve==> B
+  // B 컴포넌트에게 전달하고자 하는 데이터를 찾거나
+  // 가공하는 목적의 로직을 배치
   resolve(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<any> | Promise<any> | any {

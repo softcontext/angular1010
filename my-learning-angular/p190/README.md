@@ -1,27 +1,68 @@
-# P190
+ng g c parent -t -s --spec false
+ng g c parent/child -t -s --spec false --flat
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
+parent constructor
+  child constructor
 
-## Development server
+p.2 : ngOnInit
+p.3 : ngDoCheck
+p.4 : ngAfterContentInit
+p.5 : ngAfterContentChecked
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  c.1 : ngOnChanges <== <app-child [key]="'value'"></app-child>
+  c.2 : ngOnInit
+  c.3 : ngDoCheck
+  c.4 : ngAfterContentInit
+  c.5 : ngAfterContentChecked
+  c.6 : ngAfterViewInit
+  c.7 : ngAfterViewChecked
 
-## Code scaffolding
+p.6 : ngAfterViewInit
+p.7 : ngAfterViewChecked
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+****
 
-## Build
+child 컴포넌트 파괴
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+p.3 : ngDoCheck
+p.5 : ngAfterContentChecked
 
-## Running unit tests
+  c.8 : ngOnDestroy
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+p.7 : ngAfterViewChecked
 
-## Running end-to-end tests
+****
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+변경감지 작동: 초기에 1번, 어떤 이벤트가 발생하더라도 다시 체크
 
-## Further help
+p.3 : ngDoCheck
+p.5 : ngAfterContentChecked
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  c.3 : ngDoCheck
+  c.5 : ngAfterContentChecked
+  c.7 : ngAfterViewChecked
+
+p.7 : ngAfterViewChecked
+
+***
+
+부모 컴포넌트의 상태정보가 있을 때
+
+parent constructor
+
+p.2 : ngOnInit
+p.3 : ngDoCheck
+p.4 : ngAfterContentInit
+p.5 : ngAfterContentChecked
+
+  child constructor
+  c.1 : ngOnChanges <== <app-child [key]="'value'"></app-child>
+  c.2 : ngOnInit
+  c.3 : ngDoCheck
+  c.4 : ngAfterContentInit
+  c.5 : ngAfterContentChecked
+  c.6 : ngAfterViewInit
+  c.7 : ngAfterViewChecked
+
+p.6 : ngAfterViewInit
+p.7 : ngAfterViewChecked

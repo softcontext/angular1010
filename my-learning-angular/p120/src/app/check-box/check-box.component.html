@@ -1,0 +1,13 @@
+<div>
+  <div *ngFor="let city of cities;let i=index">
+    <input type="checkbox" id="city{{i}}" [name]="cities"
+        [(ngModel)]="city.checked">
+    <label for="city{{i}}">{{city.han}}</label>
+  </div>
+</div>
+<div class="">
+  <button type="button" (click)="confirm()">Confirm</button>
+  <pre>{{cities | json}}</pre>
+</div>
+
+<hr>

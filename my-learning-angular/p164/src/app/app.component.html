@@ -31,7 +31,7 @@
         <li><a routerLink="member-list">Member List</a></li>
         <li class="divider"></li>
         <!-- PlayerModule 을 정적으로 연동한다. -->
-        <li><a routerLink="player">Player</a></li>
+        <li><a routerLink="player">Player : 작동안함</a></li>
         <!-- PlayerModule 을 동적으로 연동한다. 실제 사용할 때 객체화 하는 레이지로딩이다. -->
         <li><a routerLink="lazy/player">Lazy Player</a></li>
       </ul>
@@ -42,3 +42,5 @@
     <router-outlet></router-outlet>
   </div>
 </div>
+<hr>
+<div highlight>{{ "PlayeR" | myUpper }}</div>

@@ -3,6 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PlayerComponent } from './player.component';
 
+// 루트 모듈의 라우팅 설정:
+// { path: 'lazy/player', loadChildren: '../app/player/player.module#PlayerModule' }
+// URL 문자열이 lazy/player 일 때, player.module 모듈을 생성한다.
+// player.module 모듈안에 존재하는 다수의 컴포넌트 중 디폴트로 배치할 컴포넌트를
+// 설정하기 위하여 다음 설정이 필요합니다.
+// { path: '', component: PlayerComponent }
+
 const routes: Routes = [
   { path: '', component: PlayerComponent },
   { path: 'player', component: PlayerComponent },

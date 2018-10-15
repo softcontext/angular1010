@@ -14,4 +14,11 @@ export class NgclassComponent implements OnInit {
   ngOnInit() {
   }
 
+  changeClass() {
+    if (this.myclass) {
+      this.myclass = "";
+    } else {
+      this.myclass = "active";
+    }
+  }
 }

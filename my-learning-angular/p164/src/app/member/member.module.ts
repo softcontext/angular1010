@@ -17,7 +17,7 @@ import { MemberListComponent } from './member-list.component';
   ],
   declarations: [HighlightDirective, MemberListComponent],
   providers: [MemberService],
-  exports: []
+  exports: [HighlightDirective]
 })
 export class MemberModule {
   constructor() {

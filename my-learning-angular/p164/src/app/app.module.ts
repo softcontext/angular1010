@@ -29,8 +29,9 @@ import { IntroComponent, HelloComponent, CoreTestComponent} from './component/in
     AppRoutingModule,
     CoreModule.forRoot({nickName: 'Happy'}),
     MemberModule,
+    ShareModule,
     // PlayerModule,
-    ShareModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

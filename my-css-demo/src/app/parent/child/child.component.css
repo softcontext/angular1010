@@ -1,0 +1,10 @@
+:host {
+  /* box-sizing: border-box; */
+  display: block;
+  background-color: white;
+}
+
+/* <app-child class="active"></app-child> */
+:host-context(.active) {
+  background-color: silver;
+}
